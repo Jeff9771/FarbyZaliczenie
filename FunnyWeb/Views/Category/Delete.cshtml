@@ -1,0 +1,33 @@
+﻿@model Category
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Usuwanie Farb</h2>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name">Nazwa Farby</label>
+            <input asp-for="Name" type="text" class="form-control" disabled />
+        </div>
+        <div class="mb-3">
+            <label asp-for="PaintNumber">Numer Farby</label>
+            <input asp-for="PaintNumber" type="text" class="form-control" disabled />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Type">Typ Farby</label>
+            <input asp-for="Type" type="text" class="form-control" />
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary form-control">Usuń</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Category" asp-action="Index" class="btn btn-secondary form-control">Powrót do listy</a>
+            </div>
+        </div>
+
+
+    </div>
+</form>
